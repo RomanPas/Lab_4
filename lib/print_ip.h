@@ -48,12 +48,6 @@ std::enable_if_t<
 // ----------------------------------------------------------------------------------------------
 // tuple without verification
 
-template<typename T0, typename ...Args>
-void print(const std::tuple<T0, Args...>& ip)
-{
-	PrintTuple<decltype(ip), sizeof...(Args) + 1>::print(ip);
-}
-
 template<typename Tuple, std::size_t N>
 struct PrintTuple {
 	static void print(const Tuple& t)
@@ -70,6 +64,12 @@ struct PrintTuple<Tuple, 1> {
 		std::cout << std::get<0>(t);
 	}
 };
+
+template<typename T0, typename ...Args>
+void print(const std::tuple<T0, Args...>& ip)
+{
+	PrintTuple<decltype(ip), sizeof...(Args) + 1>::print(ip);
+}
 // ----------------------------------------------------------------------------------------------
 
 template<typename T>
