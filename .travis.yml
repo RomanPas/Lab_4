@@ -9,6 +9,7 @@ install:
 before_script:
 - sudo apt-get update -qq
 script:
+- doxygen Doxyfile
 - cmake .
 - cmake --build .
 - cmake --build . --target test
