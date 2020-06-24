@@ -4,9 +4,10 @@
 #include <list>
 #include <tuple>
 
-/**
-@brief Example of a comment in doxygen
-@detailed Homework №4 print_ip
+/*!
+	\brief Example of a comment in doxygen
+
+	Homework №4 print_ip
 */
 
 template<typename T>
