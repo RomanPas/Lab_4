@@ -4,6 +4,12 @@
 #include <list>
 #include <tuple>
 
+/*!
+	\brief Example of a comment in doxygen
+
+	Homework №4 print_ip
+*/
+
 template<typename T>
 std::enable_if_t<std::is_integral<T>::value, void>
 print(T ip)
